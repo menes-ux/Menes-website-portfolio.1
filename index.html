@@ -24,18 +24,34 @@
          <h1>ma.</h1>
 
         <!-- navigation bar -->
-        <div class="navbar">
-            <nav>
-                <a href="/html/">About</a> 
-                <a href="/css/">Project</a> 
-                <a href="/js/">Experience</a> 
-                <a href="/python/">Contacts</a>
-            </nav>
+        <div class="navbar"> 
+            <nav> <!-- this is to make the header responsive --> 
+            <ul class="sidebar"> 
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="/html/">About</a></li>
+                <li><a href="/html/">Project</a></li>
+                <li><a href="/html/">Experience</a></li>
+                <li><a href="/html/">Contacts</a></li> 
+                <li><a href="/html/">Resume (PDF)</a></li> 
+                <li><a href="/html/">Github</a></li> 
+                <li><a href="/html/">Dark mode</a></li> 
+                
+            </ul> 
+            
+            <ul>
+                <li class="hideOnMobile"><a href="/html/">About</a></li>
+                <li class="hideOnMobile"><a href="/html/">Project</ a></li>
+                <li class="hideOnMobile"><a href="/html/">Experience</a></li> 
+                <li class="hideOnMobile"><a href="/html/">Contacts</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
+            </ul> 
+            </nav> 
         </div>
 
         <!-- Resume download button / Github link icon / ligh-Dark toggle icon-->
          <div class="options">
-            <button>Resume/CV
+            <button class="hideOnMobile">Resume/CV
                 <!-- Here I will add divs for a sparkle animation -->
                 <div class="star-1">
                     <svg
@@ -154,13 +170,28 @@
             </button>
 
             <div class="github">
-                <img src="./Header svgpics/github-svgrepo-com.svg" alt="Github icon" width="27px" height="27">
+                <img class="hideOnMobile" src="./Header svgpics/github-svgrepo-com.svg" alt="Github icon" width="27px" height="27">
             </div>
             
             <div class="sun"> 
-            <img src="./Header svgpics/moon-stars-svgrepo-com.svg" alt="Sun icon/toggle" width="27px" height="27" >
+            <img class="hideOnMobile" src="./Header svgpics/moon-stars-svgrepo-com.svg" alt="Sun icon/toggle" width="27px" height="27" >
             </div>
          </div>
+
+
+         <!-- Javascript function to open the sidebar  -->
+          <script>
+            function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';}
+
+            function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            }
+
+
+          </script>
     </header>
     
 
