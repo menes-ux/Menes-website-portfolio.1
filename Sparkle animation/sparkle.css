@@ -1,93 +1,13 @@
-/* This part is necesary to adapt our css styling to the web browser */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
-}
-
-
-body{
-  font-family: Poppins;
-}
-
-/* Header styling */
-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  
-
-  /* Transparent blur effect */
-  background: rgba(255, 255, 255, 0.1);  /* light transparent overlay */
-  backdrop-filter: blur(10px);           /* the magic blur */
-  -webkit-backdrop-filter: blur(10px);   /* Safari support */
-
-  border-bottom: 3px solid rgba(255, 255, 255, 0.2); /* subtle line */
-}
-
-header h1{
-  font-family: Poppins;
-  font-weight: 800;
-  margin-left: 5.625rem;
-}
-
-.options{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1.25rem;
-  align-items: center;
-  margin-right: 2.5rem;
-  
-}
-
-
-nav{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2.5rem;
-  font-family: Poppins;
-  font-weight: bold;
-  color: black;
-  margin-left: 3.125rem;
-}
-
-nav a{
-  text-decoration: none;
-  color: black;
-
-  /* text-transform: uppercase; */
-  /* text-shadow: 0 0 15px #FF0800; */
-  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-nav a:hover {
-  color: #FF0800;
-  transform: scale(1.3);
-  text-shadow: none;
-  
-}
-
-
-/* Sparkle animation */
-.options button {
+button {
     position: relative;
-    font-family: Poppins;
-    font-weight: 500;
-    background-color: #FF0800 ;
-    color: rgb(255, 255, 255);
+    padding: 20px 35px;
+    background: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    border-radius: 100px;
     border: none;
-    border-radius: .625rem;
-    padding: .625rem;
-    font-size: 11px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
@@ -220,23 +140,11 @@ nav a:hover {
     left: 105%;
     width: 10px;
     height: auto;
-    filter: drop-shadow(0 0 10px #020202);
+    filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
   }
   
-.fil0 {
-  fill: #EF9B0F; /* Gold */
-}
-
-.star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
-  filter: drop-shadow(0 0 8px #EF9B0F);
-}
-    
-.github{
-  display: block;
-    transition: transform 0.5s ease-in-out; /* Smooth rotation */
-}
-
-.github:hover {
-  transform: rotateY(360deg);
-}
+  .fil0 {
+    fill: #fffdef;
+  }
+  
