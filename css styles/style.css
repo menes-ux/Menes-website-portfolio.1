@@ -1,0 +1,4 @@
+/* General styling to adapt to different browser and take control of the full screen */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
