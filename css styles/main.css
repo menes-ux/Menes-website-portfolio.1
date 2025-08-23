@@ -1,2 +1,47 @@
+/* Hero section styling */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* center horizontally */
+    text-align: center;
+    margin-top: 150px;  /* adjusted for responsiveness */
+    padding: 0 20px;    /* padding for small screens */
+}
+
+.hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;  /* ensures portrait images stay nicely cropped */
+}
+
+.hero h1 {
+    font-weight: bolder;
+    font-size: clamp(2rem, 5vw, 4rem); /* responsive font size */
+    letter-spacing: -0.07em;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 20px;
+}
+
+.gradient {
+    background: linear-gradient(to right, rgb(253, 214, 157), rgb(199, 165, 144), rgb(108, 136, 190), rgb(133, 132, 114), rgb(94, 108, 152));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.hero p {
+    max-width: 700px;  /* limits width on large screens */
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 auto;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* responsive font size */
+}
 
 

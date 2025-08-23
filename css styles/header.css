@@ -1,16 +1,23 @@
+/* General styling to adapt to different browser and take control of the full screen */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
 
 
 
 body {
     
-    font-family: Poppins, sans-serif; /* Applying the font we linked previuously from index... (Poppins) */} 
+    font-family: Poppins, sans-serif; /* Applying the font we linked previuously from index... (Poppins) */
+    background-color: #F5F5F5; /* light neutral gray */
+    color: #1C1C1C; 
+} 
 
 /* Overall Header styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,21 +26,25 @@ header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
-    padding: 0 2.5rem;}
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.12); */
+    padding: 0 2.5rem;
+    }
+
 
     
     header .logo p {/* Logo styling */
         font-family: Poppins, sans-serif;
-        font-weight: bold;
-        font-size: 2rem;
-        margin: 0;}
+        font-weight: 800;
+        font-size: 2.2rem;
+        margin-left: px;
+        letter-spacing: -0.07em;}
 
     /* Navigation bar styling */
     .navbar {
         display: flex;
         flex-grow: 1; /* This makes the nav bar fill the middle space */
-        justify-content: center; /* This centers the ul within the navbar */}
+        justify-content: center; /* This centers the ul within the navbar */
+        margin-left: px;}
 
         nav ul {
             display: flex;
@@ -121,13 +132,13 @@ header {
         .options button {
             position: relative;
             font-family: Poppins;
-            font-weight: 500;
+            font-weight: bolder;
             background-color: #FF0800;
             color: rgb(255, 255, 255);
             border: none;
             border-radius: .625rem;
             padding: .625rem;
-            font-size: 11px;
+            font-size: 12px;
             transition: all 0.3s ease-in-out;
             cursor: pointer;}
 
@@ -159,6 +170,7 @@ header {
         /* Hover animation for the mode toggle icon */
         .mode {
             transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);}
+
         .mode:hover {
             transform: scale(1.3);
             text-shadow: none;}
