@@ -45,3 +45,57 @@
 }
 
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+            .cta-links {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            }
+
+            .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 0.9rem 1.6rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: background-color 0.25s ease, transform 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px; /* space between text and arrow */
+            }
+
+            .btn:hover {
+            background-color: #222;
+            transform: translateY(-2px);
+            }
+
+            .btn:active {
+            transform: translateY(0);
+            }
+
+            /* Arrow animation */
+            .arrow {
+            display: inline-block;
+            animation: moveArrow 1.2s infinite ease-in-out;
+            }
+
+            @keyframes moveArrow {
+            0%   { transform: translateX(0); }
+            50%  { transform: translateX(6px); }
+            100% { transform: translateX(0); }
+            }
+
+
+.skills {
+    text-align: center;    
+}
+.skills h2{
+    font-weight: 800;
+    
+}
