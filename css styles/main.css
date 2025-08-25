@@ -99,3 +99,162 @@ html {
     font-weight: 800;
     
 }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.skillsicons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.2s ease;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: auto;
+  max-width: 600px; /* keeps it centered but flexible */
+  width: 100%; 
+  background-color: rgb(240, 240, 240);
+  padding: 20px 0px 20px 0px;
+  border-radius: 16px;
+  box-shadow: 7px 13px 89px 28px rgba(0, 0, 0, 0.12);
+}
+ @media (max-width: 600px) {
+  .skillsicons {
+    gap: 10px;                  /* tighter spacing on small screens */
+    padding: 15px;
+    width: 95%;                 /* take more width on smaller devices */
+  }
+}
+
+.skillsicons svg {
+     transition: transform 0.2s ease;
+  
+}
+
+.skillsicons p {
+  font-size: 0.9rem;
+  font-weight: 500;
+   
+}
+
+.skillsicons svg:hover {
+  transform: translateY(-5px);
+}
+
+
+.section-line {
+  border: none;                /* remove default style */
+  height: 3px;                 /* thickness of the line */
+  width: 60%;                  /* reasonable width */
+  background-color: #000;
+  margin: 0.5rem auto 1.5rem;  /* spacing & center alignment */
+  border-radius: 10px;          /* smooth edges */
+}
+
+.experience{
+    margin-top: 6.25rem;
+}
+
+.experience h2{
+    font-family: var(--fonts-poppins);
+    letter-spacing: -1px;
+    margin-left: 20%;
+    
+}
+
+@media (max-width:56.25rem) {
+    .experience h2{
+        margin: auto;
+    }
+
+    .section-line{
+        width: 90%;
+    }
+    
+}
+
+.experiencetitle{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+/* Base styling remains the same */
+.experiencecontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* General styling */
+.experience1 {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto; /* Added to center the content */
+    margin-bottom: 2rem;
+}
+
+.experience1 p {
+    line-height: 1.5;
+}
+
+/* Title and date container */
+.experiencetitle1 {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+.subtitle-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1; /* Allows it to take up available space */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 10px; /* Spacing between title and date */
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+}
+
+.subtitle h3 {
+    font-size: 1.0625rem;
+}
+
+.experiencetitle1 p {
+    font-size: 13px;
+    font-style: italic;
+    margin: 0;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 800px) {
+    .experience1 {
+        width: 90%;
+    }
+
+    .experiencetitle1 {
+        flex-direction: column; /* Stacks the items vertically */
+        align-items: flex-start; /* Aligns to the left */
+        gap: 0.5rem; /* Small spacing between title and date */
+    }
+
+    .subtitle-date {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+}
+

@@ -79,6 +79,8 @@ header {
             transform: scale(1.3);
             text-shadow: none;}
 
+            
+
 
     /* Sidebar styling */
     .sidebar {
@@ -117,7 +119,7 @@ header {
                 display: none;}
 
         /* Media Queries for Responsiveness  on mobile with a maximum width 800px (Tablet phone etc...)*/
-        @media (max-width: 800px) {
+        @media (max-width: 950px) {
             .hideOnMobile {
                 display: none;
             }
