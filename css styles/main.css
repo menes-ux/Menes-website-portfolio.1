@@ -30,7 +30,7 @@
 }
 
 .gradient {
-    background: linear-gradient(to right, rgb(253, 214, 157), rgb(199, 165, 144), rgb(108, 136, 190), rgb(133, 132, 114), rgb(94, 108, 152));
+    background: linear-gradient(to right, rgb(253, 214, 157), rgb(199, 165, 144), rgb(108, 136, 190), rgb(133, 132, 114), rgb(94, 108, 152)); 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -92,6 +92,9 @@ html {
             }
 
 
+
+/* Skills sections */
+
 .skills {
     text-align: center;    
 }
@@ -149,6 +152,9 @@ html {
 }
 
 
+
+/* Experience sections */
+
 .section-line {
   border: none;                /* remove default style */
   height: 3px;                 /* thickness of the line */
@@ -162,7 +168,7 @@ html {
     margin-top: 6.25rem;
 }
 
-.experience h2{
+.experiencetitle h2{
     font-family: var(--fonts-poppins);
     letter-spacing: -1px;
     margin-left: 20%;
@@ -170,7 +176,7 @@ html {
 }
 
 @media (max-width:56.25rem) {
-    .experience h2{
+    .experiencetitle h2{
         margin: auto;
     }
 
@@ -258,3 +264,9 @@ html {
 
 }
 
+
+/* Projects  */
+
+.project{
+    margin-top: 500px;
+}
