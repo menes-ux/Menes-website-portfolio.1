@@ -96,7 +96,8 @@ html {
 /* Skills sections */
 
 .skills {
-    text-align: center;    
+    text-align: center;   
+    margin-bottom: 50px; 
 }
 .skills h2{
     font-weight: 800;
@@ -269,4 +270,149 @@ html {
 
 .project{
     margin-top: 500px;
+}
+
+
+/* --- SECTION CONTAINER & TITLE --- */
+
+/* This new class centers the entire projects section on the page */
+.projects-container {
+    width: 80%;
+    max-width: 1100px; /* Sets a maximum width for large screens */
+    margin: 0 auto;    /* Centers the container horizontally */
+    text-align: center; /* Ensures the title and line inside are centered */
+}
+
+
+
+
+
+/* --- RESPONSIVE CARD GRID --- */
+
+/* This is the key change for a responsive layout */
+.project-cards {
+    display: grid;
+    /* Creates responsive columns. They will be at least 300px wide and will
+       expand equally to fill available space. New columns are added automatically
+       as the screen gets wider. */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* The space between your cards */
+    width: 100%;   /* Make the grid container take up the full width of its parent */
+}
+
+
+/* --- INDIVIDUAL CARD STYLING --- */
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; /* Keeps the image corners rounded */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Override parent's text-align: center */
+
+    /* These flex properties ensure all cards have the same height */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Prevents the image from being stretched or squashed */
+}
+
+/* This container holds all the text and buttons */
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* This is crucial: it makes this area expand to fill
+                     any empty space, pushing the buttons to the bottom */
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    /* This makes the description take up any available space before the buttons,
+       which helps align the buttons in adjacent cards. */
+    flex-grow: 1;
+}
+
+.technologies {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* --- BUTTON STYLING --- */
+
+.projectbutton {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Shared button base styles */
+.projectbutton a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative; /* needed for the arrow */
+}
+
+.projectbutton a::after {
+    content: "↗"; /* arrow symbol */
+    font-size: 0.8rem;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+}
+
+/* On hover, arrow slides a bit */
+.projectbutton a:hover::after {
+    transform: translate(3px, -3px);
+}
+
+/* Primary "View Project" */
+.projectbutton a.view-project {
+    background-color: #007bff;
+}
+.projectbutton a.view-project:hover {
+    background-color: #0056b3;
+}
+
+/* Secondary "Source Code" */
+.projectbutton a.source-code {
+    background-color: #333;
+}
+.projectbutton a.source-code:hover {
+    background-color: #000;
+}
+
+
+footer{
+    padding: 40px 1.25rem;
+    background-color: #191919;
+    padding-bottom: 300px;
+    color: white;
 }
