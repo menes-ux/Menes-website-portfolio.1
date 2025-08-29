@@ -1,12 +1,58 @@
-/* Hero section styling */
+:root {
+    --background-color: #F5F5F5;
+    --text-color: #1C1C1C;
+    --highlight-color: #007bff;
+    --highlight-hover: #0056b3;
+    --secondary-color: #333;
+    --secondary-hover: #000;
+    --gradient-start: rgb(253, 214, 157);
+    --gradient-mid1: rgb(199, 165, 144);
+    --gradient-mid2: rgb(108, 136, 190);
+    --gradient-mid3: rgb(133, 132, 114);
+    --gradient-end: rgb(94, 108, 152);
+    --section-line: #000;
+    --card-bg: #fff;
+    --card-text: #666;
+    --card-tech: #333;
+    --btn-text: #fff;
+    --btn-bg-primary: #007bff;
+    --btn-hover-primary: #0056b3;
+    --btn-bg-secondary: #333;
+    --btn-hover-secondary: #000;
+}
+
+
+/* Dark mode variables */
+.darkmode {
+    --background-color: #121212;
+    --text-color: #000000;
+    --highlight-color: #1E90FF;
+    --highlight-hover: #1C86EE;
+    --secondary-color: #555;
+    --secondary-hover: #ccc;
+    --card-bg: #1E1E1E;
+    --card-text: #fffdfd;
+    --btn-text: #000000;
+    --btn-bg-primary: #000000;
+    --btn-hover-primary: #1C86EE;
+    --btn-bg-secondary: #555;
+    --btn-hover-secondary: #777;
+    --section-line: #fff;
+}
+
+
+
+
+
+
 .hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* center horizontally */
+    align-items: center;
     text-align: center;
-    margin-top: 150px;  /* adjusted for responsiveness */
-    padding: 0 20px;    /* padding for small screens */
+    margin-top: 150px;
+    padding: 0 20px;
 }
 
 .hero img {
@@ -14,12 +60,12 @@
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
-    object-fit: cover;  /* ensures portrait images stay nicely cropped */
+    object-fit: cover;
 }
 
 .hero h1 {
     font-weight: bolder;
-    font-size: clamp(2rem, 5vw, 4rem); /* responsive font size */
+    font-size: clamp(2rem, 5vw, 4rem);
     letter-spacing: -0.07em;
     margin-bottom: 10px;
 }
@@ -30,389 +76,218 @@
 }
 
 .gradient {
-    background: linear-gradient(to right, rgb(253, 214, 157), rgb(199, 165, 144), rgb(108, 136, 190), rgb(133, 132, 114), rgb(94, 108, 152)); 
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-mid1), var(--gradient-mid2), var(--gradient-mid3), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
 .hero p {
-    max-width: 700px;  /* limits width on large screens */
+    max-width: 700px;
     font-weight: 400;
     line-height: 1.6;
     margin: 0 auto;
-    font-size: clamp(0.9rem, 2.5vw, 1.1rem); /* responsive font size */
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
-
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+.cta-links {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
 
-            .cta-links {
-            display: flex;
-            justify-content: center;
-            margin: 40px 0;
-            }
+.btn {
+    background-color: var(--btn-bg-primary);
+    color: var(--btn-text);
+    padding: 0.9rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
 
-            .btn {
-            background-color: #000;
-            color: #fff;
-            padding: 0.9rem 1.6rem;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            letter-spacing: 0.3px;
-            transition: background-color 0.25s ease, transform 0.2s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px; /* space between text and arrow */
-            }
+.btn:hover {
+    transform: translateY(-2px);
+}
 
-            .btn:hover {
-            background-color: #222;
-            transform: translateY(-2px);
-            }
+.btn:active {
+    transform: translateY(0);
+}
 
-            .btn:active {
-            transform: translateY(0);
-            }
+.arrow {
+    display: inline-block;
+    animation: moveArrow 1.2s infinite ease-in-out;
+}
 
-            /* Arrow animation */
-            .arrow {
-            display: inline-block;
-            animation: moveArrow 1.2s infinite ease-in-out;
-            }
-
-            @keyframes moveArrow {
-            0%   { transform: translateX(0); }
-            50%  { transform: translateX(6px); }
-            100% { transform: translateX(0); }
-            }
-
-
-
-/* Skills sections */
+@keyframes moveArrow {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); }
+    100% { transform: translateX(0); }
+}
 
 .skills {
-    text-align: center;   
-    margin-bottom: 50px; 
+    text-align: center;
+    margin-bottom: 50px;
 }
-.skills h2{
+
+.skills h2 {
     font-weight: 800;
-    
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-direction: column;
 }
 
 .skillsicons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: transform 0.2s ease;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: auto;
-  max-width: 600px; /* keeps it centered but flexible */
-  width: 100%; 
-  background-color: rgb(240, 240, 240);
-  padding: 20px 0px 20px 0px;
-  border-radius: 16px;
-  box-shadow: 7px 13px 89px 28px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: transform 0.2s ease;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 20px 0;
+    border-radius: 16px;
+    box-shadow: 7px 13px 89px 28px rgba(180, 180, 180, 0.12);
 }
- @media (max-width: 600px) {
-  .skillsicons {
-    gap: 10px;                  /* tighter spacing on small screens */
-    padding: 15px;
-    width: 95%;                 /* take more width on smaller devices */
-  }
+
+@media (max-width: 600px) {
+    .skillsicons {
+        gap: 10px;
+        padding: 15px;
+        width: 95%;
+    }
 }
 
 .skillsicons svg {
-     transition: transform 0.2s ease;
-  
+    transition: transform 0.2s ease;
 }
 
 .skillsicons p {
-  font-size: 0.9rem;
-  font-weight: 500;
-   
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .skillsicons svg:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
-
-
-/* Experience sections */
-
+/* Experience section */
 .section-line {
-  border: none;                /* remove default style */
-  height: 3px;                 /* thickness of the line */
-  width: 60%;                  /* reasonable width */
-  background-color: #000;
-  margin: 0.5rem auto 1.5rem;  /* spacing & center alignment */
-  border-radius: 10px;          /* smooth edges */
+    border: none;
+    height: 3px;
+    width: 60%;
+    background-color: var(--section-line);
+    margin: 0.5rem auto 1.5rem;
+    border-radius: 10px;
 }
 
-.experience{
-    margin-top: 6.25rem;
+.experience { margin-top: 6.25rem; }
+.experiencetitle h2 { margin-left: 20%; }
+
+@media (max-width: 56.25rem) {
+    .experiencetitle h2 { margin: auto; }
+    .section-line { width: 90%; }
 }
 
-.experiencetitle h2{
-    font-family: var(--fonts-poppins);
-    letter-spacing: -1px;
-    margin-left: 20%;
-    
-}
-
-@media (max-width:56.25rem) {
-    .experiencetitle h2{
-        margin: auto;
-    }
-
-    .section-line{
-        width: 90%;
-    }
-    
-}
-
-.experiencetitle{
+.experiencetitle {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
 
-/* Base styling remains the same */
-.experiencecontent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-/* General styling */
-.experience1 {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    margin: 0 auto; /* Added to center the content */
-    margin-bottom: 2rem;
-}
+.experiencecontent { display: flex; flex-direction: column; align-items: center; }
+.experience1 { display: flex; flex-direction: column; width: 60%; margin: 0 auto 2rem; }
+.experience1 p { line-height: 1.5; }
 
-.experience1 p {
-    line-height: 1.5;
-}
+.experiencetitle1 { display: flex; justify-content: space-between; padding-bottom: 15px; align-items: center; }
+.subtitle-date { display: flex; align-items: center; justify-content: space-between; flex-grow: 1; flex-wrap: wrap; gap: 10px; }
+.subtitle { display: flex; align-items: center; gap: .625rem; }
+.subtitle h3 { font-size: 1.0625rem; }
+.experiencetitle1 p { font-size: 13px; font-style: italic; margin: 0; }
 
-/* Title and date container */
-.experiencetitle1 {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 15px;
-    align-items: center;
-}
-
-.subtitle-date {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 1; /* Allows it to take up available space */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 10px; /* Spacing between title and date */
-}
-
-.subtitle {
-    display: flex;
-    align-items: center;
-    gap: .625rem;
-}
-
-.subtitle h3 {
-    font-size: 1.0625rem;
-}
-
-.experiencetitle1 p {
-    font-size: 13px;
-    font-style: italic;
-    margin: 0;
-}
-
-/* --- Responsive tweaks --- */
 @media (max-width: 800px) {
-    .experience1 {
-        width: 90%;
-    }
-
-    .experiencetitle1 {
-        flex-direction: column; /* Stacks the items vertically */
-        align-items: flex-start; /* Aligns to the left */
-        gap: 0.5rem; /* Small spacing between title and date */
-    }
-
-    .subtitle-date {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
+    .experience1 { width: 90%; }
+    .experiencetitle1 { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .subtitle-date { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
 
+/* Projects section */
+.project { margin-top: 500px; }
+.projects-container { width: 80%; max-width: 1100px; margin: 0 auto; text-align: center; }
 
-/* Projects  */
-
-.project{
-    margin-top: 500px;
-}
-
-
-/* --- SECTION CONTAINER & TITLE --- */
-
-/* This new class centers the entire projects section on the page */
-.projects-container {
-    width: 80%;
-    max-width: 1100px; /* Sets a maximum width for large screens */
-    margin: 0 auto;    /* Centers the container horizontally */
-    text-align: center; /* Ensures the title and line inside are centered */
-}
-
-
-
-
-
-/* --- RESPONSIVE CARD GRID --- */
-
-/* This is the key change for a responsive layout */
 .project-cards {
     display: grid;
-    /* Creates responsive columns. They will be at least 300px wide and will
-       expand equally to fill available space. New columns are added automatically
-       as the screen gets wider. */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem; /* The space between your cards */
-    width: 100%;   /* Make the grid container take up the full width of its parent */
+    gap: 2.5rem;
+    width: 100%;
 }
-
-
-/* --- INDIVIDUAL CARD STYLING --- */
 
 .card {
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 12px;
-    overflow: hidden; /* Keeps the image corners rounded */
+    overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left; /* Override parent's text-align: center */
-
-    /* These flex properties ensure all cards have the same height */
+    text-align: left;
     display: flex;
     flex-direction: column;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
+.card:hover { transform: translateY(-10px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover; /* Prevents the image from being stretched or squashed */
-}
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card-content { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
+.card-title { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--text-color); }
+.card-description { font-size: 0.95rem; color: var(--card-text); line-height: 1.5; flex-grow: 1; }
+.technologies { margin: 1rem 0 1.5rem 0; font-size: 0.85rem; color: var(--card-tech); font-weight: 600; }
 
-/* This container holds all the text and buttons */
-.card-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* This is crucial: it makes this area expand to fill
-                     any empty space, pushing the buttons to the bottom */
-}
+/* Buttons */
+.projectbutton { display: flex; gap: 1rem; align-items: center; }
 
-.card-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #000;
-}
-
-.card-description {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.5;
-    /* This makes the description take up any available space before the buttons,
-       which helps align the buttons in adjacent cards. */
-    flex-grow: 1;
-}
-
-.technologies {
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.85rem;
-    color: #333;
-    font-weight: 600;
-}
-
-
-/* --- BUTTON STYLING --- */
-
-.projectbutton {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-/* Shared button base styles */
 .projectbutton a {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: var(--btn-text);
     padding: 8px 14px;
     border-radius: 6px;
     font-size: 0.9rem;
     transition: all 0.3s ease;
     text-align: center;
-    position: relative; /* needed for the arrow */
+    position: relative;
 }
 
 .projectbutton a::after {
-    content: "↗"; /* arrow symbol */
+    content: "↗";
     font-size: 0.8rem;
     margin-left: 6px;
     transition: transform 0.3s ease;
 }
 
-/* On hover, arrow slides a bit */
-.projectbutton a:hover::after {
-    transform: translate(3px, -3px);
-}
+.projectbutton a:hover::after { transform: translate(3px, -3px); }
+.projectbutton a.view-project { background-color: var(--btn-bg-primary); }
+.projectbutton a.view-project:hover { background-color: var(--btn-hover-primary); }
+.projectbutton a.source-code { background-color: var(--btn-bg-secondary); }
+.projectbutton a.source-code:hover { background-color: var(--btn-hover-secondary); }
 
-/* Primary "View Project" */
-.projectbutton a.view-project {
-    background-color: #007bff;
-}
-.projectbutton a.view-project:hover {
-    background-color: #0056b3;
-}
-
-/* Secondary "Source Code" */
-.projectbutton a.source-code {
-    background-color: #333;
-}
-.projectbutton a.source-code:hover {
-    background-color: #000;
-}
+body { overflow-x: hidden; }
 
 
-footer{
-    padding: 40px 1.25rem;
-    background-color: #191919;
-    padding-bottom: 300px;
-    color: white;
-}
+
