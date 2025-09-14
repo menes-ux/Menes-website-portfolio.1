@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- I am using this picture as icon for my portfolio!-->
-    <link rel="icon" type="png" href="./web pic.png">
+    <link rel="icon" type="png" href="./Assets/Head/Website icon.png">
 
     <!-- Here I am connecting my javascript script to this html file -->
      <script type="text/javascript" src="./script.js" defer></script>
@@ -26,12 +26,12 @@
 
 <!-- My body starts here (main work) ! -->
 <body class="darkmode">
-    <!-- The "header" will only have the responsive navbar -->
+    <!-- The "header" will only have the navbar -->
     <header>
         <!-- I divided the header into three parts: the logo/the main navbar/and a set of options for the user(Resume/mode) -->
         <!-- logo -->
         <div class="logo">
-            <p>ma.</p>
+            <p><a href="#hero"></a> ma.</p>
         </div>
 
         <!-- main navbar -->
@@ -50,7 +50,7 @@
         <!-- Options for the user -->
         <div class="options">
             <!-- Button Resume -->
-            <a href="Resume_Menes Adisso.pdf" download="Resume_Menes Adisso.pdf">
+            <a href="./Assets/Docs/Resume_Menes Adisso.pdf" download="Resume_Menes Adisso.pdf">
             <button class="hideOnMobile">RESUME/CV
                 <!-- I wanted to add a sparkle animation especially for this button since it is where the user will be able to dowload my Resume -->
                  <!-- So I linked 6 svg sparkle icons from the internet and I will animate them using css -->
@@ -88,52 +88,43 @@
             </a>
 
         </div>
-
+                <!-- RESPONSIVE MENU -->
             
                 <!-- Now I added an hamburger menu icon to appear on mobile to replace the navbar. Using js, I will make a sidebar appear on mobile -->
                 <!-- Icons are taken either from google.fonts.icons or from my own collection locally! -->
                 <div class="menu-button" onclick="showSidebar()">
-                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="26px" fill="#000000">
                             <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"></path>
                         </svg>
-                    </a>
                 </div>
 
                 <!-- Here is the icon that will allow the user to switch from light to dark mode -->
-             <!-- And as a reminder, I added the function "hideOnmobile" to allow those items to be hidden on mobile-->
-            <div class="hideOe"> 
-                <button id="themeswitch">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom: 5px;" height="40px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom: 5px;" height="40px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-                </button>
-            </div>
+                <!-- And as a reminder, I added the function "hideOnmobile" to allow those items to be hidden on mobile-->
+                <div class="hideOe"> 
+                    <button id="themeswitch">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom: 5px;" height="40px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="padding-bottom: 5px;" height="40px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+                    </button>
+                </div>
 
 
-
-
-
-
-        <!-- Here is the side bar html that will appear on mobile -->
-        <ul class="sidebar">
-            <li onclick="hideSidebar()">
-                <a href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
-                    </svg>
-                </a>
-            </li>
-            <li><a href="#hero">Home</a></li>
-                <li ><a href="#skills">Skills</a></li>
-                <li ><a href="#projects">Projects</a></li>
-                <li ><a href="#experience">Experience</a></li>
-                <li ><a href="#getintouch">Get in touch</a></li>
-            <li><a href="./Resume_Menes Adisso.pdf" download="Resume_Menes_Adisso">Resume (PDF)</a></li>
-
-        </ul>
-            
+                <!-- Here is the side bar html that will appear on mobile -->
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li onclick="hideSidebar()"><a href="#hero">Home</a></li>
+                    <li onclick="hideSidebar()"><a href="#skills">Skills</a></li>
+                    <li onclick="hideSidebar()"><a href="#projects">Projects</a></li>
+                    <li onclick="hideSidebar()"><a href="#experience">Experience</a></li>
+                    <li onclick="hideSidebar()"><a href="#getintouch">Get in touch</a></li>
+                    <li onclick="hideSidebar()"><a href="./Assets/Docs/Resume_Menes Adisso.pdf" download="Resume_Menes Adisso.pdf">Resume (PDF)</a></li>
+                </ul>       
     </header>
-
 
 
     <!-- The main section is essentially where the main content of my portfolio will be located -->
@@ -141,7 +132,7 @@
     <main>
         <!-- This section represent the first part of my main -->
         <section class="hero" id="hero" >
-           <img src="image copy.png" alt="Menes profile id"> 
+           <img src="./Assets/body/main/Hero/Profile picture.png" alt="Menes profile id"> 
 
            <h1>Menes Adisso</h1>
            <!-- I used span to target especially the ai Sorcecer / Span is an inline element -->
@@ -230,7 +221,7 @@
                     <div class="project-cards">
                         
                     <div class="card">
-                        <img src="image copy 13.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/User profile directory.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">User Profile Directory</h3>
                         <p class="card-description">
@@ -249,8 +240,9 @@
                     </div>
 
                     </div>
+
                     <div class="card">
-                        <img src="image copy 7.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/TourMate Rwanda.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">TourMate Rwanda</h3>
                         <p class="card-description">
@@ -268,8 +260,9 @@
                     </div>
 
                     </div>
+
                     <div class="card">
-                        <img src="image copy 9.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/Essay plagiarism detector.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">Essay plagiarism detector</h3>
                         <p class="card-description">
@@ -287,8 +280,9 @@
                     </div>
 
                     </div>
+
                     <div class="card">
-                        <img src="image copy 10.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/Submission reminder.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">Submission Reminder</h3>
                         <p class="card-description">
@@ -306,8 +300,9 @@
                     </div>
  
                     </div>
+
                     <div class="card">
-                        <img src="image copy 11.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/Testimonial grid.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">Testimonial grid layout</h3>
                         <p class="card-description">
@@ -327,8 +322,9 @@
                     </div>
 
                     </div>
+
                     <div class="card">
-                        <img src="image copy 12.png" alt="Project image">
+                        <img src="./Assets/body/main/Projects/Kids Save Kids.png" alt="Project image">
                         <div class="card-content">
                         <h3 class="card-title">Kids Save Kids</h3>
                         <p class="card-description">
@@ -345,7 +341,6 @@
                     </div>
 
                     </div>
-
                 </div>
             </div>
         </section>
@@ -364,14 +359,14 @@
                     <div class="experiencetitle1">
                         <div class="subtitle-date">
                             <div class="subtitle">
-                                <img src="image copy 5.png" alt="elevvo pathways" height="60">
-                                <h3>Front-End Development Intern | Remote, Cairo, Egypt</h3>
+                                <img src="./Assets/body/main/Experience/Elevvo Pathways.png" alt="elevvo pathways" height="60">
+                                <h3>Front-End Development Intern | Elevvo Pathways | Remote, Cairo, Egypt</h3>
                             </div>
                             <p>Aug 2025 - Present</p>
                         </div>
                     </div>
                     <p>
-                        Remote front-end intern working on pre-assigned tasks and projects using React, Tailwind CSS, HTML, CSS, and JavaScript. Gaining practical experience in implementing responsive web interfaces, applying modern front-end technologies, and following project specifications while completing ongoing assignments.
+                        Remote front-end intern working on pre-assigned tasks and projects at using React, Tailwind CSS, HTML, CSS, and JavaScript. Gaining practical experience in implementing responsive web interfaces, applying modern front-end technologies, and following project specifications while completing ongoing assignments.
                     </p>
                 </div>
 
@@ -379,7 +374,7 @@
                     <div class="experiencetitle1">
                         <div class="subtitle-date">
                             <div class="subtitle">
-                                <img src="stanford-university-seeklogo.svg" alt="Standford logo"  height="60px" >
+                                <img src="./Assets/body/main/Experience/Stanford logo.svg" alt="Standford logo"  height="60px" >
                                 <h3>Code in Place Stanford University | Remote, United States </h3>
                             </div>
                             <p>Apr 2025 - June 2025</p>
@@ -395,7 +390,7 @@
                     <div class="experiencetitle1">
                         <div class="subtitle-date">
                             <div class="subtitle">
-                                <img src="idmUoOm6xl_1756129945084.jpeg" alt="African Leadership University" height="60px" >
+                                <img src="./Assets/body/main/Experience/alu logo.jpeg" alt="African Leadership University" height="60px" >
                                 <h3>Student Ambassador | On site, Kigali Rwanda</h3>
                             </div>
                             <p>Apr 2025 - Present</p>
@@ -434,42 +429,40 @@
     <!-- This is where the footer having my contacts will be located -->
     <footer id="getintouch">
         <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>Get in Touch</h3>
-                <p>Let's work together to create something amazing. Reach out to me!</p>
-                <br>
-                <p>m.adisso@alustudent.com</p>
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>Get in Touch</h3>
+                    <p>Let's work together to create something amazing. Reach out to me!</p>
+                    <br>
+                    <p>m.adisso@alustudent.com</p>
 
-            </div>
+                </div>
 
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                </ul>
-            </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-social">
-                <h3>Socials</h3>
-                <div class="social-icons">
-                    <a target="_blank" href="https://github.com/menes-ux" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/menes.ads/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/m%C3%A9n%C3%A8s-adisso-b4581b25b/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a target="_blank" href="https://www.pinterest.com/menes_adisso/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                <div class="footer-social">
+                    <h3>Socials</h3>
+                    <div class="social-icons">
+                        <a target="_blank" href="https://github.com/menes-ux" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/menes.ads/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/m%C3%A9n%C3%A8s-adisso-b4581b25b/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="https://www.pinterest.com/menes_adisso/" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>Coded with ❤️ by <strong>Menes Adisso</strong> in Kigali, Rwanda</p>
                 </div>
             </div>
-        <div class="footer-bottom">
-            <p>Coded with ❤️ by <strong>Menes Adisso</strong> in Kigali, Rwanda</p>
-        </div>
+        </footer>
     </footer>
-
-    </footer>
-
-
-    
 </body>
 </html>

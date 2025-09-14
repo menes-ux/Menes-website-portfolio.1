@@ -109,6 +109,8 @@ header .logo p {
     font-size: 2.2rem;
     color: var(--logo-color);
     letter-spacing: -0.07em;
+    cursor:pointer;
+    
 }
 
 .navbar {
@@ -186,6 +188,7 @@ nav a:hover {
 
 .menu-button {
     display: none;
+    background: var(--header-bg);
 }
 
 @media (max-width: 950px) {
